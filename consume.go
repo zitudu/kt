@@ -121,6 +121,9 @@ func (cmd *consumeCmd) parseArgs(as []string) {
 	cmd.pretty = args.pretty
 	cmd.version = kafkaVersion(args.version, os.Getenv(ENV_VERSION))
 	cmd.group = args.group
+	if cmd.group == "" {
+		cmd.group = os.Getenv(ENV_GROUP)
+	}
 
 	readAuthFile(args.auth, os.Getenv(ENV_AUTH), &cmd.auth)
 

@@ -26,6 +26,7 @@ const (
 	ENV_ADMIN_TIMEOUT = "KT_ADMIN_TIMEOUT"
 	ENV_BROKERS       = "KT_BROKERS"
 	ENV_TOPIC         = "KT_TOPIC"
+	ENV_GROUP         = "KT_GROUP"
 	ENV_VERSION       = "KT_VERSION"
 )
 

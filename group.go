@@ -350,6 +350,9 @@ func (cmd *groupCmd) parseArgs(as []string) {
 
 	cmd.topic = args.topic
 	cmd.group = args.group
+	if cmd.group == "" {
+		cmd.group = os.Getenv(ENV_GROUP)
+	}
 	cmd.verbose = args.verbose
 	cmd.pretty = args.pretty
 	cmd.offsets = args.offsets
